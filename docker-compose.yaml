@@ -1,0 +1,15 @@
+version: '3'
+services:
+  app:
+    build: .
+    image: price_prediction:v1
+    ports:
+      - "8765:8765"
+    # volumes:
+    #   - .:/app
+    # stdin_open: true
+    # tty: true
+    restart: "always"
+    # command: /bin/bash 
+    # comand: ["streamlit", "run", "app.py] # overrides the command in Dockerfile 
+
