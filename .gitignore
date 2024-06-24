@@ -1,3 +1,6 @@
 # Files to be ignored by git
 # static/
 # templates/
+*_env/ 
+*.log
+*.pyc
