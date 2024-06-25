@@ -6,7 +6,7 @@
 # Step 1:
 # Create dockerpath
 # dockerpath=<your docker ID/path>
-dockerpath="omarkhalil10/mlproject:v1.0.0"
+dockerpath="veraz00/priceprediction:v1"
 
 # Step 2:
 # Authenticate & tag
