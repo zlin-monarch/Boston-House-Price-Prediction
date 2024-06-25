@@ -4,3 +4,5 @@
 *_env/ 
 *.log
 *.pyc
+notes/ 
+*.swp
