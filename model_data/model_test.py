@@ -19,6 +19,7 @@ def predict_housing_price(input_data):
     :return: A prediction of the housing price.
     """
     clf = joblib.load("./model_data/boston_housing_prediction.joblib")    
+    print('Model:', clf)
     input_pd = pd.DataFrame(input_data)
     scaled_input = scale(input_pd)
     prediction = list(clf.predict(scaled_input))
