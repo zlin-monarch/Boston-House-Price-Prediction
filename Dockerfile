@@ -9,6 +9,7 @@ WORKDIR /app
 COPY main.py requirements.txt /app/
 COPY model_data /app/model_data/
 COPY utils /app/utils/
+COPY static /app/static/
 
 # Run app.py at container launch
 

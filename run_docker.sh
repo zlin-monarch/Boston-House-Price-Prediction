@@ -9,7 +9,7 @@ docker compose up --build
 ### Method 2: Step by step
 # Step 1:
 # Build image and add a descriptive tag
-docker build --tag=price_prediction .
+docker build --tag=medv .
 
 # Step 2:
 # List docker images
@@ -17,4 +17,4 @@ docker image ls
 
 # Step 3:
 # Run streamlit app
-docker run -p 8765:8765 price_prediction
+docker run -p 8765:8765 medv

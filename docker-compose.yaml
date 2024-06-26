@@ -2,9 +2,9 @@ version: '3'
 services:
   app:
     build: .
-    image: price_prediction:v1
+    image: medv:v1
     ports:
-      - "8765:8765"
+      - "5678:8765"
     # volumes:
     #   - .:/app
     # stdin_open: true

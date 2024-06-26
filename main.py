@@ -25,14 +25,24 @@ if "model" not in st.session_state.keys():
     st.session_state["model"] = model
     st.session_state["logger"] = logger
 
+# print(st.session_state.keys())
 model = st.session_state["model"]
 logger = st.session_state["logger"]
 
 # Initialize session state for lstat and ptratio if not already set
-if 'lstat' not in st.session_state:
-    st.session_state.lstat = 2.00
-if 'ptratio' not in st.session_state:
-    st.session_state.ptratio = 17.0
+# if 'lstat' not in st.session_state:
+#     st.session_state.lstat = 2.00
+# if 'ptratio' not in st.session_state:
+#     st.session_state.ptratio = 17.0
+
+if 'first_visit' not in st.session_state:
+    st.session_state.first_visit=True
+else:
+    st.session_state.first_visit=False
+
+if st.session_state.first_visit:
+    st.balloons()
+    st.session_state.first_visit=False
 
 chas = st.radio('Charles River dummy variable (0: not adjacent, 1: adjacent)', [0, 1])
 rm = st.slider('Average number of rooms per dwelling (Range)', min_value=4.0, max_value=8.5, step=0.1)
@@ -40,8 +50,8 @@ tax = st.slider('Full-value property tax rate (Range)', min_value=190, max_value
 b = st.slider('1000(Bk - 0.63 sqft) where Bk is the proportion of blacks by town', min_value=375, max_value= 395, step=10)
 
 
-lstat = st.number_input('Lower status of the population (range from 2% to 30%)', min_value=2.00, max_value = 30.00, value = st.session_state.lstat, step = 1.00, format = '%0.01f')
-ptratrio=  st.number_input('Pupil-teacher ratio by town (range from 17% to 21%)', min_value=17.00, max_value=21.00, value = st.session_state.ptratio, step = 0.1, format = '%0.01f')
+lstat = st.number_input('Lower status of the population (range from 2% to 30%)', min_value=2.00, max_value = 30.00, step = 1.00, format = '%0.01f')
+ptratrio=  st.number_input('Pupil-teacher ratio by town (range from 17% to 21%)', min_value=17.00, max_value=21.00, step = 0.1, format = '%0.01f')
 
 
 # # Get user input for each feature

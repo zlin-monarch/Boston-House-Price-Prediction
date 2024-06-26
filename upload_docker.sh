@@ -6,7 +6,7 @@
 # Step 1:
 # Create dockerpath
 # dockerpath=<your docker ID/path>
-dockerpath="veraz00/priceprediction:v1"
+dockerpath="veraz00/medv:v1"
 
 # Step 2:
 # Authenticate & tag
