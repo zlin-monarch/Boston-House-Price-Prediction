@@ -17,4 +17,4 @@ docker image ls
 
 # Step 3:
 # Run streamlit app
-docker run -p 8765:8765 medv
+docker run -p 5678:8765 medv
